@@ -2,10 +2,9 @@ use std::io::{BufRead, BufReader};
 use std::fs::File;
 
 fn main() {
-    let result = read_file();
-    let result_p1 = result.clone();
-
-
+    let result_p1 = read_file();
+    let result_p2 = result_p1.clone();
+    
     //problem1:
     let mut sum = 1;
     for current in 0..result_p1.len()-1 {
@@ -16,7 +15,7 @@ fn main() {
     println!("Problem 1: {}", sum);
 
     //problem2:
-    let res = calc_nums(result);
+    let res = calc_nums(result_p2);
     println!("Problem 2: {}", res);
 
 }
